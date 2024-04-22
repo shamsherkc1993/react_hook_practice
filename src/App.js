@@ -1,23 +1,25 @@
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
+  let txt = "shamsher kc";
+  const [myName, newMyName] = useState('shamsher kc')
+  console.log(useState('I am from tokyo'))
+
+  const changeText = () => {
+    // txt = "I am from tokyo";
+    // alert(txt)
+    newMyName('I am from tokyo')
+
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='container'>
+      <div className='row'>
+         <h1> { myName } </h1>
+        <button type="button" className="btn btn-primary" onClick={changeText}>Primary</button>
+
+      </div>
     </div>
   );
 }
