@@ -1,5 +1,7 @@
 import React from 'react'
 
+
+//use spread operator with array
 const UseStateObject = () => {
     const [myObject, setMyObject] = React.useState({
         name : "shamsher", address : "tokyo", age : 28, height : 6, status : "single"
