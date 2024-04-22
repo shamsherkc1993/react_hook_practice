@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ArrayWithUseState from './component/ArrayWithUseState';
+import UseStateObject from './component/UseStateObject';
 
 
 function App() {
@@ -25,7 +26,8 @@ function App() {
       <div className='row'>
          {/* <h1> { myName } </h1>
         <button type="button" className="btn btn-primary" onClick={changeText}>Primary</button> */}
-        <ArrayWithUseState />
+        {/* <ArrayWithUseState /> */}
+        <UseStateObject />
 
       </div>
     </div>
