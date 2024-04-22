@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 //using array with map method
+//added single line delete method, use filter method to delete single data
 const ArrayWithUseState = () => {
 
     const bioData = [
@@ -10,17 +11,17 @@ const ArrayWithUseState = () => {
              address : "tokyo"
         },
         {
-            id: 0,
+            id: 1,
             name : "rakesh",
              address : "delhi"
         },
         {
-            id: 0,
+            id: 2,
             name : "rabin",
              address : "ktm"
         },
         {
-            id: 0,
+            id: 3,
             name : "urmila",
              address : "dang"
         }
@@ -31,12 +32,23 @@ const ArrayWithUseState = () => {
     const clearArray = () => {
         setMyArray([]);
     }
+
+    const removeElem = (id) => {
+        const myNewData = myArray.filter((myElement)=>{
+            return myElement.id != id;
+        })
+
+        setMyArray(myNewData);
+
+    }
   return (
     <div>
         <div class="form-group">
             {
                 myArray.map((currentElem) => {
-                    return <h1>Name : {currentElem.name} & address : {currentElem.address}</h1>
+                    return <h1>Name : {currentElem.name} & address : {currentElem.address}
+                    <button className='btn btn-primary' onClick={ () => removeElem(currentElem.id)}>Remove</button>
+                    </h1>
                 })
             }
             <button className='btn btn-danger' onClick={clearArray}>Clear data</button>

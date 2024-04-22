@@ -26,8 +26,8 @@ function App() {
       <div className='row'>
          {/* <h1> { myName } </h1>
         <button type="button" className="btn btn-primary" onClick={changeText}>Primary</button> */}
-        {/* <ArrayWithUseState /> */}
-        <UseStateObject />
+        <ArrayWithUseState />
+        {/* <UseStateObject /> */}
 
       </div>
     </div>
