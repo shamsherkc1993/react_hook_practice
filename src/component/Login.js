@@ -9,9 +9,16 @@ const Login = () => {
   
   const submitHandler = (e) => {
     e.preventDefault();
-    const newEntry ={email : email, password : password}
-    setAllEntry([...allEntry, newEntry]);
-    console.log(allEntry)
+    if (email && password) {
+        const newEntry ={id : new Date().getTime().toString, email : email, password : password}
+        setAllEntry([...allEntry, newEntry]);
+        console.log(allEntry)
+        setEmail("");
+        setPassword("");
+    } else {
+        alert ("user and pass incorrect")
+    }
+   
   }
   
     return (
@@ -59,10 +66,12 @@ const Login = () => {
     <div>
         {
             allEntry.map((currentElem) =>{
+                const {id, email, password} =currentElem
                 return (
-                    <div>
-                        <p>{currentElem.email}</p>
-                        <p>{currentElem.password}</p>
+                    <div key={id}>
+                        <p>Login data</p>
+                        <p>{email}</p>
+                        <p>{password}</p>
 
                     </div>
                 )
