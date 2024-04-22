@@ -3,15 +3,17 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
-  let txt = "shamsher kc";
-  const [myName, newMyName] = useState('shamsher kc')
-  console.log(useState('I am from tokyo'))
+  const [myName, setMyName] = useState('shamsher kc')
+  let value = myName;
 
   const changeText = () => {
-    // txt = "I am from tokyo";
-    // alert(txt)
-    newMyName('I am from tokyo')
+  if (value === "shamsher kc") {
+    setMyName('i am from tokyo')
+  } else {
+    setMyName('shamsher kc')
+  }
 
+    
   }
   return (
     <div className='container'>

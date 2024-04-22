@@ -1,21 +1,14 @@
 body {
-  background-color: red;
+  background-color: #617776 !important;
 }
 
 .container h1{
-  font-size: 45px;
+  margin-top: 20%;
   text-align: center;
-  color: #fff;
-  position: absolute;
-  right: 40%;
-  top: 38%;
-  width: 278px;
-  color: #f10c0c;
+  color: chocolate;
 }
 
 .container button {
-  width : 200px;
-  position: absolute;
-  right: 43%;
-  top: 60%;
+  width: 200px;
+  margin-left: 43%;
 }
