@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import ArrayWithUseState from './component/ArrayWithUseState';
 import UseStateObject from './component/UseStateObject';
 import ShortCircuitEvaluation from './component/ShortCircuitEvaluation';
+import Login from './component/Login';
 
 
 function App() {
@@ -29,7 +30,8 @@ function App() {
         <button type="button" className="btn btn-primary" onClick={changeText}>Primary</button> */}
         {/* <ArrayWithUseState /> */}
         {/* <UseStateObject /> */}
-        <ShortCircuitEvaluation />
+        {/* <ShortCircuitEvaluation /> */}
+        <Login />
 
       </div>
     </div>
