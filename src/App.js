@@ -5,6 +5,8 @@ import ArrayWithUseState from './component/ArrayWithUseState';
 import UseStateObject from './component/UseStateObject';
 import ShortCircuitEvaluation from './component/ShortCircuitEvaluation';
 import Login from './component/Login';
+import ApiPractice from './component/ApiPractice';
+import UseEffect from './component/UseEffect';
 
 
 function App() {
@@ -21,7 +23,20 @@ function App() {
   value === "shamsher kc" ?
     setMyName('i am from tokyo') : setMyName('shamsher kc')
   }
-
+const data = [
+  {
+    id : 1, name : "ram"
+  },
+  {
+    id : 2, name : "victor"
+  },
+  {
+    id : 3, name : "ramesh"
+  },
+  {
+    id : 4, name : "padam"
+  }
+]
 
   return (
     <div className='container'>
@@ -31,7 +46,9 @@ function App() {
         {/* <ArrayWithUseState /> */}
         {/* <UseStateObject /> */}
         {/* <ShortCircuitEvaluation /> */}
-        <Login />
+        {/* <Login /> */}
+        <ApiPractice />
+        {/* <UseEffect /> */}
 
       </div>
     </div>
